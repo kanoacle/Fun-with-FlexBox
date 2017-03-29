@@ -4,6 +4,25 @@
 @import "partials/general_styles.scss";
 
 // 1. Many small items in a grid
+@media screen and (max-width: 900px) {
+  .small-grid-inline-block-hack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+      width: 400px;
+      height: 400px;
+      display: flex;
+      flex-flow: row wrap;
+    }
+    li {
+      width: 38px;
+      height: 38px;
+      line-height: 38px;
+      text-align: center;
+    }
+  }
+}
 .small-grid-flexbox {
   display: flex;
   flex-direction: column;
@@ -85,5 +104,47 @@
   }
   .item-d {
     width: 70px;
+  }
+}
+// 5. Extra
+.extra-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  .item {
+    height: 400px;
+    padding: 0;
+  }
+  .item-a {
+    width: 100px;
+  }
+  .item-b {
+    width: 100px;
+  }
+  .item-c {
+    width: 100px;
+  }
+  .item-d {
+    width: 100px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1030px) {
+  .extra-block {
+    .item-a {
+      width: 50px;
+    }
+    .item-c {
+      width: 150px;
+    }
+  }
+}
+@media (min-width: 376px) and (max-width: 768px) {
+  .extra-block {
+    .item-a {
+      width: 10px;
+    }
+    .item-c {
+      width: 190px;
+    }
   }
 }
