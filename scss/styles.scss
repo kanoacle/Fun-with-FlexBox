@@ -1,17 +1,89 @@
 // Imports
-
-
+@import "partials/reset.scss";
+@import "partials/clearfix.scss";
+@import "partials/general_styles.scss";
 
 // 1. Many small items in a grid
-
-
-
+.small-grid-flexbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  ul {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  li {
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+  }
+}
 // 2. 2-Column Grid
-
-
-
+.two-col-grid-floats {
+ display: flex;
+ justify-content: center;
+  .column-1 {
+    width: 200px;
+    height: 400px;
+  }
+  .column-2 {
+    width: 200px;
+    height: 400px;
+  }
+}
+.two-col-grid-flexbox {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  .column-1 {
+    height: 200px;
+    width: 400px;
+  }
+  .column-2 {
+    height: 200px;
+    width: 400px;
+  }
+}
+.column-1 {
+  padding: 0;
+}
+.column-2 {
+  padding: 0;
+}
 // 3. Centering
-
-
-
+.centering-formula {
+  display: flex;
+  justify-content: center;
+  height: 450px;
+}
+.centered{
+  width: 400px;
+  height: 400px;
+  padding: 0;
+}
 // 4. Ordering
+.ordering-block {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  .item {
+    height: 400px;
+    padding: 0;
+    margin: 0 5px;
+  }
+  .item-a {
+    width: 100px;
+  }
+  .item-b {
+    width: 140px;
+  }
+  .item-c {
+    width: 45px;
+  }
+  .item-d {
+    width: 70px;
+  }
+}
